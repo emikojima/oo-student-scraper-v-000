@@ -25,7 +25,7 @@ class Scraper
     doc = Nokogiri::HTML(open(profile_url))
     student_profile = {}
     #binding.pry
-     student_profile.reject { |k, v| %i(c d).include?(k) && v == '' }
+     
      student_profile = {
        :twitter=> doc.css(".social-icon-container a").attr("href").value,
        :linkedin=> doc.css(".social-icon-container a")[1]['href'],
