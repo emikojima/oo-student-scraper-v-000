@@ -33,7 +33,7 @@ class Scraper
        :profile_quote=> doc.css(".profile-quote").text,
        :bio=> doc.css(".description-holder p").text.gsub(/\s+/, " ").strip
      }
-    
+    student_profile.reject { |k, v| %i(c d).include?(k) && v == '' }
     student_profile 
   end
 
