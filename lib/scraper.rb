@@ -28,7 +28,7 @@ class Scraper
      x.each do |social|
         
         if social.include?("twitter")
-         student_profile << {"twitter"=> social}
+         student_profile = {:twitter => social}
      end 
    end 
     # student_profile = {
