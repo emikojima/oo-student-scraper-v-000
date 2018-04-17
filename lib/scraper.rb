@@ -22,9 +22,9 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML(open(profile_url))
     student_profile = {}
-    #binding.pry
+    binding.pry
      x= doc.css(".social-icon-container a").map {|x| x.attr("href")}
-     
+     binding.pry
      x.each do |social|
         
         if social.include?("twitter")
