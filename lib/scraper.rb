@@ -16,8 +16,6 @@ class Scraper
       }
        students << student_hash
         end
-      #   :student_profile => doc.css(".student-card a").each {|element| element["href"]}.compact
-      # }
       students
     end
 
@@ -30,7 +28,7 @@ class Scraper
      x.each do |social|
        case social 
         when social.includes?("twitter")
-         student_profile << {"twitter" => social}
+         student_profile << {"twitter"=> social}
      end 
    end 
     # student_profile = {
