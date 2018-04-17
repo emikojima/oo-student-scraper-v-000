@@ -36,9 +36,8 @@ class Scraper
       
       else
         student_profile[:blog] = social
-        end
-      end 
-     # student_profile[:blog] = doc.css(".social-icon-container a")[3]['href']
+      end
+     end 
       student_profile[:profile_quote] = doc.css(".profile-quote").text
       student_profile[:bio] = doc.css(".description-holder p").text.gsub(/\s+/, " ").strip
         
