@@ -39,3 +39,4 @@ class Scraper
   end
 
 end
+doc.css(".social-icon-container a").map {|x| x.attr("href").value
