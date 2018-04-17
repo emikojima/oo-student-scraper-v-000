@@ -28,6 +28,7 @@ class Scraper
      x= doc.css(".social-icon-container a").map {|x| x.attr("href")}
      
      x.each do |social|
+       case
        if social.includes?("twitter")
          
      
