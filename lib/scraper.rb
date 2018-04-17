@@ -25,13 +25,13 @@ class Scraper
      x= doc.css(".social-icon-container a").map {|x| x.attr("href")}
      x.each do |social|
        binding.pry
-      social.include?("twitter")
+      if social.include?("twitter")
       student_profile[:twitter] = social
-       
-      social.include?("linkedin")
+      
+      elsif social.include?("linkedin")
       student_profile[:linkedin] = social
-         
-      social.include?("github")
+       
+      elsif social.include?("github")
       student_profile[:github] = social
      end 
       student_profile[:blog] = doc.css(".social-icon-container a")[3]['href']
