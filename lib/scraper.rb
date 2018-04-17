@@ -29,13 +29,14 @@ class Scraper
         
         if social.include?("twitter")
          student_profile = {:twitter => social}
+       end 
         if social.include?("linkedin")
            student_profile = {:linkedin => social}
+         end 
         if social.include?("github")
            student_profile = {:github => social}
         end 
-      end 
-    end 
+     
    end 
     # student_profile = {
     #   :twitter=> doc.css(".social-icon-container a").attr("href").value,
