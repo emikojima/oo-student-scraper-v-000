@@ -31,7 +31,7 @@ class Scraper
        case social 
         when social.includes?("twitter")
          student_profile << {"twitter" => social}
-     
+     end 
     # student_profile = {
     #   :twitter=> doc.css(".social-icon-container a").attr("href").value,
     #   :linkedin=> doc.css(".social-icon-container a")[1]['href'],
