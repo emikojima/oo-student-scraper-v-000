@@ -33,7 +33,7 @@ class Scraper
     #   :profile_quote=> doc.css (".profile-quote").text,
        :bio=> doc.css(".description-holder").text.gsub(/\s+/, " ").strip
      }
-    doc.css (".vital-text-container").text
+    
     student_profile 
   end
 
