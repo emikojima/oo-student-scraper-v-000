@@ -29,7 +29,7 @@ class Scraper
        :twitter=> doc.css(".social-icon-container a").attr("href").value,
        :linkedin=> doc.css(".social-icon-container a")[1]['href'],
        :github=> doc.css(".social-icon-container a")[2]['href'],
-       :blog=> doc.css(".social-icon-container a")[3]['href'], 
+       :blog=> doc.css(".social-icon-container a")[3]['href'],
     #   :profile_quote=> doc.css (".profile-quote").text,
        :bio=> doc.css(".description-holder p").text.gsub(/\s+/, " ").strip
      }
