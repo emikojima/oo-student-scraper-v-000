@@ -21,8 +21,8 @@ class Scraper
       students
     end
 
-  def self.scrape_profile_page("./fixtures/student-site/students/david-kim.html")
-    doc = Nokogiri::HTML(open("./fixtures/student-site/students/david-kim.html"))
+  def self.scrape_profile_page(profile_url)
+    doc = Nokogiri::HTML(open(profile_url))
     student_profile = {}
     binding.pry
      
