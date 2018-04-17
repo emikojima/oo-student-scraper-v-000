@@ -33,9 +33,12 @@ class Scraper
        
       elsif social.include?("github")
       student_profile[:github] = social
+      
+      else
+        student_profile[:blog] = social
         end
       end 
-      student_profile[:blog] = doc.css(".social-icon-container a")[3]['href']
+     # student_profile[:blog] = doc.css(".social-icon-container a")[3]['href']
       student_profile[:profile_quote] = doc.css(".profile-quote").text
       student_profile[:bio] = doc.css(".description-holder p").text.gsub(/\s+/, " ").strip
         
