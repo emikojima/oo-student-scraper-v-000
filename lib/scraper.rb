@@ -30,7 +30,7 @@ class Scraper
      x.each do |social|
        case social 
         when social.includes?("twitter")
-         student_profile
+         student_profile << {"a" => 1, "b" => 2}
      
     # student_profile = {
     #   :twitter=> doc.css(".social-icon-container a").attr("href").value,
