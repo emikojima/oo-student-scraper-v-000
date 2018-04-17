@@ -31,6 +31,10 @@ class Scraper
          student_profile = {:twitter => social}
          if social.include?("linkedin")
            student_profile = {:linkedin => social}
+           if social.include?("github")
+           student_profile = {:github => social}
+           if social.include?("linkedin")
+           student_profile = {:linkedin => social}
      end 
    end 
     # student_profile = {
