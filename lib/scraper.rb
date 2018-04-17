@@ -24,15 +24,18 @@ class Scraper
     student_profile = {}
      x= doc.css(".social-icon-container a").map {|x| x.attr("href")}
      x.each do |social|
-        social.include?("twitter")
-         student_profile[:twitter] = social
+      social.include?("twitter")
+      student_profile[:twitter] = social
        
-        social.include?("linkedin")
-           student_profile[:linkedin] = social
+      social.include?("linkedin")
+      student_profile[:linkedin] = social
          
-        social.include?("github")
-           student_profile[:github] = social
-          end 
+      social.include?("github")
+      student_profile[:github] = social
+     end 
+      student_profile[:blog] = doc.css(".social-icon-container a")[3]['href']
+      student_profile[:profile_quote] = doc.css(".profile-quote").text
+      student_profile[:bio] = doc.css(".description-holder p").text.gsub(/\s+/, " ").strip
         
      
   
@@ -40,9 +43,7 @@ class Scraper
     #   :twitter=> doc.css(".social-icon-container a").attr("href").value,
     #   :linkedin=> doc.css(".social-icon-container a")[1]['href'],
     #   :github=> doc.css(".social-icon-container a")[2]['href'],
-    student_profile[:blog] = doc.css(".social-icon-container a")[3]['href']
-      student_profile[:profile_quote] = doc.css(".profile-quote").text
-      student_profile[:bio] = doc.css(".description-holder p").text.gsub(/\s+/, " ").strip
+      
     # }
    
     student_profile 
