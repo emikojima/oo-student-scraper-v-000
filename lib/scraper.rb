@@ -28,7 +28,8 @@ class Scraper
      x= doc.css(".social-icon-container a").map {|x| x.attr("href")}
      
      x.each do |social|
-       if social includes?()
+       if social.includes?("twitter")
+         
      
     # student_profile = {
     #   :twitter=> doc.css(".social-icon-container a").attr("href").value,
